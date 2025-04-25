@@ -1,7 +1,7 @@
 # Data_Privacy_Challenge
-Unmasking the Private: Adversarial Attacks on Differential Privacy
-**Test Folder** is used for the purpose of training the model
-Run the **gui.py** file
+Unmasking the Private: Adversarial Attacks on Differential Privacy<br>
+**Test Folder** is used for the purpose of training the model<br>
+Run the **gui.py** file<br>
 **WorkFlow**<br>
 ->1. Preprocessing<br>
 One-hot encode or normalize both data sets (df_A and df_B)<br>
