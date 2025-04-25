@@ -54,3 +54,6 @@ python gui.py
 
 ![Confidence Distribution](https://github.com/user-attachments/assets/908a3eb4-dcf9-47b6-9b01-4fcdef46571d)
 
+##GUI Application
+![image](https://github.com/user-attachments/assets/81617c6e-2a1d-4f3e-b7d9-500044ebf3df)
+
