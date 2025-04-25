@@ -13,7 +13,7 @@ python gui.py
 
 ---
 
-## ⚙️ Workflow Overview
+## ⚙️ Workflow Overview:
 
 1. **Preprocessing**  
    - One-hot encode or normalize both datasets: `df_A` and `df_B`.
