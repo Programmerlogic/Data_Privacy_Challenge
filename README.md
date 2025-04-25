@@ -1,7 +1,7 @@
 # Data_Privacy_Challenge
 Unmasking the Private: Adversarial Attacks on Differential Privacy
 
-WorkFlow<br>
+**WorkFlow**<br>
 ->1. Preprocessing<br>
 One-hot encode or normalize both data sets (df_A and df_B)<br>
 ->2. Triplet Embedding Training<br>
@@ -18,7 +18,7 @@ Transform distances into confidence: confidence = 1 / (1 + distance).<br>
 
 ![1df5f9a1-c16f-41a0-808d-e83aa5c3ffe8](https://github.com/user-attachments/assets/908a3eb4-dcf9-47b6-9b01-4fcdef46571d)
 
-Evaluation Metrics<br>
+**Evaluation Metrics**<br>
 Approximate Accuracy (no duplicate A-IDs): 99.53%<br>
 Mean Match Confidence: 0.9867<br>
 Confidence-Weighted Accuracy: 98.21%<br>
