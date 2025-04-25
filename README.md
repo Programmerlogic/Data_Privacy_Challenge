@@ -1,3 +1,7 @@
+Here's your updated version with the **process of running** steps added before the Workflow Overview:
+
+---
+
 # 🔐 Data Privacy Challenge  
 ### *Unmasking the Private: Adversarial Attacks on Differential Privacy*
 
@@ -10,6 +14,25 @@ To get started, simply run:
 ```bash
 python gui.py
 ```
+
+---
+
+## 🚀 How to Run the Matching Process
+
+1. **Upload `original.csv`**  
+   - This file contains the reference dataset (df_B).
+
+2. **Upload `challenge.csv`**  
+   - This file contains the anonymized dataset (df_A).
+
+3. **Load Existing Model**  
+   - Use the GUI or backend script to load the pre-trained triplet embedding model.
+
+4. **Run Matching**  
+   - The system processes both datasets through the model and runs FAISS-based matching.
+
+5. **Store Result**  
+   - The matched results will be saved in a folder as `matched_results.csv`.
 
 ---
 
@@ -54,6 +77,10 @@ python gui.py
 
 ![Confidence Distribution](https://github.com/user-attachments/assets/908a3eb4-dcf9-47b6-9b01-4fcdef46571d)
 
-**GUI Application**
+**GUI Application** 
+
 ![image](https://github.com/user-attachments/assets/81617c6e-2a1d-4f3e-b7d9-500044ebf3df)
 
+---
+
+Would you like this in Markdown, PDF, or integrated into your GUI as tooltips or a help modal?
