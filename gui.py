@@ -70,7 +70,7 @@ class TripletGUIApp:
         self.main_frame = tk.Frame(master)
         self.main_frame.pack(expand=True, fill='both')
 
-        tk.Label(self.main_frame, text="Triplet Training GUI", font=("Arial", 16)).pack(pady=20)
+        tk.Label(self.main_frame, text="Data Privacy Cracker", font=("Arial", 16)).pack(pady=20)
 
         tk.Button(self.main_frame, text="Upload Original.csv", command=self.load_df_A, width=30, height=2).pack(pady=5)
         tk.Button(self.main_frame, text="Upload Challenge.csv", command=self.load_df_B, width=30, height=2).pack(pady=5)
