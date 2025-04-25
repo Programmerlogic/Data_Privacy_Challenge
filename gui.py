@@ -59,11 +59,11 @@ class TripletGUIApp:
         self.sidebar = tk.Frame(master, width=250, bg="#f0f0f0")
         self.sidebar.pack(side=tk.LEFT, fill=tk.Y)
         tk.Label(self.sidebar, text="Loaded Files", bg="#f0f0f0", font=("Arial", 14, "bold")).pack(pady=10)
-        self.original_label = tk.Label(self.sidebar, text="Original: ❌", bg="#f0f0f0", anchor='w')
+        self.original_label = tk.Label(self.sidebar, text="Original: ", bg="#f0f0f0", anchor='w')
         self.original_label.pack(fill='x', padx=10)
-        self.challenge_label = tk.Label(self.sidebar, text="Challenge: ❌", bg="#f0f0f0", anchor='w')
+        self.challenge_label = tk.Label(self.sidebar, text="Challenge: ", bg="#f0f0f0", anchor='w')
         self.challenge_label.pack(fill='x', padx=10)
-        self.model_label = tk.Label(self.sidebar, text="Model: ❌", bg="#f0f0f0", anchor='w')
+        self.model_label = tk.Label(self.sidebar, text="Model: ", bg="#f0f0f0", anchor='w')
         self.model_label.pack(fill='x', padx=10)
         self.main_frame = tk.Frame(master)
         self.main_frame.pack(expand=True, fill='both')
@@ -95,14 +95,14 @@ class TripletGUIApp:
         path = filedialog.askopenfilename(filetypes=[("CSV files", "*.csv")])
         if path:
             self.df_A = pd.read_csv(path)
-            self.original_label.config(text=f"Original: ✅ {os.path.basename(path)}")
+            self.original_label.config(text=f"Original:  {os.path.basename(path)}")
             self.enable_buttons_if_ready()
 
     def load_df_B(self):
         path = filedialog.askopenfilename(filetypes=[("CSV files", "*.csv")])
         if path:
             self.df_B = pd.read_csv(path)
-            self.challenge_label.config(text=f"Challenge: ✅ {os.path.basename(path)}")
+            self.challenge_label.config(text=f"Challenge:  {os.path.basename(path)}")
             self.enable_buttons_if_ready()
 
     def enable_buttons_if_ready(self):
@@ -163,7 +163,7 @@ class TripletGUIApp:
             self.progress_label.config(text=f"Training... {percent}% - Loss: {total_loss / len(loader):.4f}")
             self.master.update_idletasks()
         torch.save(self.encoder.state_dict(), "triplet_encoder_model.pth")
-        self.model_label.config(text="Model: ✅ triplet_encoder_model.pth")
+        self.model_label.config(text="Model:  triplet_encoder_model.pth")
         self.progress_label.config(text="Training completed and model saved!")
 
     def load_model(self):
@@ -176,7 +176,7 @@ class TripletGUIApp:
             self.encoder = Encoder(input_dim=input_dim, latent_dim=self.latent_dim).to(self.device)
             self.encoder.load_state_dict(torch.load(path))
             self.encoder.eval()
-            self.model_label.config(text=f"Model: ✅ {os.path.basename(path)}")
+            self.model_label.config(text=f"Model:  {os.path.basename(path)}")
             self.progress_label.config(text="Ready")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load model:\n{str(e)}")
