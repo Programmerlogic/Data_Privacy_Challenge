@@ -9,7 +9,7 @@ One-hot encode or normalize both data sets (df_A and df_B)<br>
 Train to learn an embedding space such that similar rows are near each other<br>
 ->3. Code Both Datasets<br>
 ->4. Matching to FAISS<br>
-Get top-1 (or top-K) nearest neighbors for each row<br>
+Get top-1 nearest neighbors for each row<br>
 Measure distances and indices<br>
 ->5. Score and Filter<br>
 Transform distances into confidence: confidence = 1 / (1 + distance).<br>
