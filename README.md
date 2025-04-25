@@ -1,7 +1,3 @@
-Here's your updated version with the **process of running** steps added before the Workflow Overview:
-
----
-
 # 🔐 Data Privacy Challenge  
 ### *Unmasking the Private: Adversarial Attacks on Differential Privacy*
 
@@ -80,7 +76,3 @@ python gui.py
 **GUI Application** 
 
 ![image](https://github.com/user-attachments/assets/81617c6e-2a1d-4f3e-b7d9-500044ebf3df)
-
----
-
-Would you like this in Markdown, PDF, or integrated into your GUI as tooltips or a help modal?
