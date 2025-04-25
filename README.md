@@ -12,7 +12,7 @@ Get top-1 (or top-K) nearest neighbors for each row<br>
 Measure distances and indices<br>
 ->5. Score and Filter<br>
 Transform distances into confidence: confidence = 1 / (1 + distance).<br>
-->7. Evaluate
+->7. Evaluate **[In matched_results.csv the index_y,name_y is index and name respectively of original.csv and index_x,name_x is index and name respectively of challenge.csv]**
 <br>
 ![0aa88b9b-ac58-4683-8fe0-c26dc9c319e6](https://github.com/user-attachments/assets/0fd4099e-4877-4170-bcd0-f8df5328fe37)
 
