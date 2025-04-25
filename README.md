@@ -1,7 +1,7 @@
 # Data_Privacy_Challenge
-Unmasking the Private: Adversarial Attacks on Differential Privacy<br>
+Unmasking the Private: Adversarial Attacks on Differential Privacy<br><br><br>
 **Test Folder** is used for the purpose of training the model<br>
-Run the **gui.py** file<br>
+Run the **gui.py** file<br><br><br>
 **WorkFlow**<br>
 ->1. Preprocessing<br>
 One-hot encode or normalize both data sets (df_A and df_B)<br>
@@ -18,7 +18,7 @@ Transform distances into confidence: confidence = 1 / (1 + distance).<br>
 ![0aa88b9b-ac58-4683-8fe0-c26dc9c319e6](https://github.com/user-attachments/assets/0fd4099e-4877-4170-bcd0-f8df5328fe37)
 
 ![1df5f9a1-c16f-41a0-808d-e83aa5c3ffe8](https://github.com/user-attachments/assets/908a3eb4-dcf9-47b6-9b01-4fcdef46571d)
-
+<br>
 **Evaluation Metrics**<br>
 Approximate Accuracy (no duplicate A-IDs): 99.53%<br>
 Mean Match Confidence: 0.9867<br>
