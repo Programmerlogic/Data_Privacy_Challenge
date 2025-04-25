@@ -2,7 +2,7 @@
 Unmasking the Private: Adversarial Attacks on Differential Privacy
 
 WorkFlow
-->1. Preprocessing
+->1. Preprocessing<br>
 One-hot encode or normalize both data sets (df_A and df_B)
 ->2. Triplet Embedding Training
 Train to learn an embedding space such that similar rows are near each other
