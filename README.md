@@ -68,7 +68,7 @@ python gui.py
 
 ## 📊 Evaluation Metrics
 
-- **Approximate Accuracy** : `99.53%`  
+- **Accuracy** : `99.53%`  
 - **Mean Match Confidence**: `0.9867`  
 - **Confidence-Weighted Accuracy**: `98.21%`  
 - **Matches with Confidence ≥ 0.8**: `99.00%`  
