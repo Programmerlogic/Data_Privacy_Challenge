@@ -76,4 +76,5 @@ python gui.py
 ![Triplet Loss Visualization](https://github.com/user-attachments/assets/0fd4099e-4877-4170-bcd0-f8df5328fe37)
 
 ![Confidence Distribution](https://github.com/user-attachments/assets/908a3eb4-dcf9-47b6-9b01-4fcdef46571d)
+![Uploading image.png…]()
 
