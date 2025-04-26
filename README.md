@@ -3,9 +3,13 @@
 
 ---
 
-## 🧪 Test Folder  
+## 📂 Test Folder  
 Used for **training and testing** the model.
 
+## 📂 Result Folder 
+Results and Visuals are stored.
+
+##
 To get started, simply run:  
 ```bash
 python gui.py
