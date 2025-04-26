@@ -4,7 +4,7 @@
 ---
 
 ## 🧪 Test Folder  
-Used for training the model.
+Used for **training and testing** the model.
 
 To get started, simply run:  
 ```bash
