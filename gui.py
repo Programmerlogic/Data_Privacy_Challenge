@@ -49,7 +49,6 @@ class TripletGUIApp:
         master.title("Encoder Trainer")
         master.geometry("800x500")
 
-        # Side Panel
         self.sidebar = tk.Frame(master, width=250, bg="#f0f0f0")
        
 
@@ -66,7 +65,6 @@ class TripletGUIApp:
         self.model_label = tk.Label(self.sidebar, text="Model: ", bg="#f0f0f0", anchor='w')
         self.model_label.pack(fill='x', padx=10)
 
-        # Main content area
         self.main_frame = tk.Frame(master)
         self.main_frame.pack(expand=True, fill='both')
 
@@ -87,11 +85,8 @@ class TripletGUIApp:
         self.progress_label = tk.Label(self.main_frame, text="", font=("Arial", 12))
         self.progress_label.pack(pady=40)
 
-        # Separator line
         ttk.Separator(self.sidebar, orient="horizontal").pack(fill="x", pady=10)
 
-       
-        # Match Summary Box
         self.summary_frame = tk.LabelFrame(self.sidebar, text="Match Accuracy Summary", padx=10, pady=5)
 
         self.summary_frame.pack(fill="x", pady=(0, 10))
@@ -112,7 +107,6 @@ class TripletGUIApp:
         if path:
             self.df_A = pd.read_csv(path)
             self.original_label.config(text=f"Original:  {os.path.basename(path)}")
-            #messagebox.showinfo("Loaded", "Loaded original.csv")
             self.enable_buttons_if_ready()
 
     def load_df_B(self):
@@ -120,7 +114,6 @@ class TripletGUIApp:
         if path:
             self.df_B = pd.read_csv(path)
             self.challenge_label.config(text=f"Challenge:  {os.path.basename(path)}")
-            #messagebox.showinfo("Loaded", "Loaded challenge.csv")
             self.enable_buttons_if_ready()
 
     def enable_buttons_if_ready(self):
@@ -130,38 +123,26 @@ class TripletGUIApp:
             self.run_button.config(state='normal')
 
     def preprocess(self):
-        #self.df_A.columns = self.df_A.columns.str.strip()
-        #self.df_A.columns = self.df_A.columns.str.replace(r'[^a-zA-Z0-9_]', '', regex=True)
-        #print(self.df_A)  # Debugging line, can be removed after checking
-        #df = self.df_A.copy()  # Make sure not to modify the original dataframe directly
-   
-        # Dropping non-relevant columns
         df_A= self.df_A.drop(['Name', 'Identifier'], axis=1)
        
-        # Check column types and identify categorical and numerical columns
         categorical_cols = df_A.select_dtypes(include=['object', 'category']).columns.tolist()
         numerical_cols = df_A.select_dtypes(include=['int64', 'float64']).columns.tolist()
    
-        # Ensure there are numerical columns before scaling
         if not numerical_cols:
             raise ValueError("No numerical columns found for scaling.")
    
-        # Ensure both df_A and df_B have the same columns after dropping irrelevant ones
         all_cols = numerical_cols + categorical_cols
         df_A = df_A[all_cols]
-        df_B = self.df_B[all_cols]  # Ensure df_B matches the columns of df_A
+        df_B = self.df_B[all_cols]  
    
-        # Handle missing values (if any)
         df_A = df_A.fillna(0)
         df_B = df_B.fillna(0)
    
-        # Initialize ColumnTransformer to preprocess numerical and categorical columns
         preprocessor = ColumnTransformer([
             ('num', StandardScaler(), numerical_cols),
             ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_cols)
         ])
    
-        # Transform the data
         X_A_enc = preprocessor.fit_transform(self.df_A)
         X_B_enc = preprocessor.transform(self.df_B)
    
@@ -323,7 +304,7 @@ class TripletGUIApp:
             messagebox.showinfo("Completed", "Matching completed and results saved.")
         except Exception as e:
             messagebox.showerror("Error", f"Error during matching:\n{str(e)}")
-                # Summary Calculations
+
         total_B = len(Z_B)
         total_matched = len(match_df)
         match_accuracy = total_matched / total_B
@@ -340,7 +321,6 @@ class TripletGUIApp:
 
 
 
-# Run the GUI
 root = tk.Tk()
 app = TripletGUIApp(root)
 root.mainloop()
