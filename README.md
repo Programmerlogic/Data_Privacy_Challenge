@@ -32,7 +32,7 @@ python gui.py
    - The system processes both datasets through the model and runs FAISS-based matching.
 
 5. **Store Result**  
-   - The matched results will be saved in a folder as `matched_results.csv`.
+   - The matched results will be saved in your  folder as `matched_results.csv`.
 
 **GUI Application** 
 
