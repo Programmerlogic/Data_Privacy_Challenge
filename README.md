@@ -36,7 +36,8 @@ python gui.py
 
 **GUI Application** 
 
-![image](https://github.com/user-attachments/assets/81617c6e-2a1d-4f3e-b7d9-500044ebf3df)
+![image](https://github.com/user-attachments/assets/dd654784-c5e9-460b-abb0-6e5f9acaaa3b)
+
 
 ---
 
