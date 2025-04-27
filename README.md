@@ -71,8 +71,8 @@ python gui.py
 
 - **Accuracy** : `100.00% (20000/20000)`  
 - **Mean Match Confidence**: `0.9861`  
-- **Confidence-Weighted Accuracy**: `98.21%`  
-- **Matches with Confidence ≥ 0.8**: `99.45%`
+- **Confidence-Weighted Accuracy**: `98.61%`  
+- **Matches with Confidence ≥ 0.85**: `99.31%`
 - **Suspicious matches (confidence < 0.85):**`0.69% (138 out of 20000)`
 
 ---
