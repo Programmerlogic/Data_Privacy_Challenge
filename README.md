@@ -68,8 +68,8 @@ python gui.py
 
 ## 📊 Evaluation Metrics
 
-- **Accuracy** : `99.53%`  
-- **Mean Match Confidence**: `0.9867`  
+- **Accuracy** : `100.00% (20000/20000)`  
+- **Mean Match Confidence**: `0.9861`  
 - **Confidence-Weighted Accuracy**: `98.21%`  
 - **Matches with Confidence ≥ 0.8**: `99.00%`  
 
@@ -79,9 +79,11 @@ python gui.py
 
 ![image](https://github.com/user-attachments/assets/d0a169aa-eddb-4dfe-8887-c2daaf9ed937)
 
-![Confidence Distribution](https://github.com/user-attachments/assets/908a3eb4-dcf9-47b6-9b01-4fcdef46571d)
+![image](https://github.com/user-attachments/assets/13fdf6e8-7b44-463e-a971-7c3bc7a7fb16)
 
-![match_confidence_scatterplot](https://github.com/user-attachments/assets/27d35f5e-6b10-4897-be07-00b857baee5a)
+
+![match_confidence_scatterplot](https://github.com/user-attachments/assets/76fe8ec3-3270-4a7d-a63e-7c79ef194b7c)
+
 
 
 ---
