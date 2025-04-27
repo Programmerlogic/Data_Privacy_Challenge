@@ -228,13 +228,13 @@ class TripletGUIApp:
    
             faiss_index = faiss.IndexFlatL2(self.latent_dim)
             faiss_index.add(Z_A.astype(np.float32))
-            D, indices = faiss_index.search(Z_B.astype(np.float32), k=5000)
+            D, indices = faiss_index.search(Z_B.astype(np.float32), k=20000)
    
             match_data = []
             used_A_indices = set()
             epsilon = 1e-6
             for i in range(len(Z_B)):
-                for j in range(5000):
+                for j in range(20000):
                     a_idx = indices[i][j]
                     if a_idx not in used_A_indices:
                         dist = D[i][j]
