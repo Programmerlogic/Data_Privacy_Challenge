@@ -1,4 +1,4 @@
-# 🔐 Data Privacy Challenge  (Revised)
+# 🔐 Data Privacy Challenge
 ### *Unmasking the Private: Adversarial Attacks on Differential Privacy*
 
 ---
